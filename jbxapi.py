@@ -47,7 +47,7 @@ API_KEY = ""
 # (for Joe Sandbox Cloud only)
 # Set to True if you agree to the Terms and Conditions.
 # https://jbxcloud.joesecurity.org/resources/termsandconditions.pdf
-ACCEPT_TAC = False
+ACCEPT_TAC = True
 
 # default submission parameters
 # when specifying None, the server decides
@@ -63,37 +63,37 @@ submission_defaults = {
     # password for decrypting documents like MS Office and PDFs
     'document-password': None,
     # This password will be used to decrypt archives (zip, 7z, rar etc.). Default password is "infected".
-    'archive-password': None,
+    'archive-password': 'infected',
     # Will start the sample with the given command-line argument. Currently only available for Windows analyzers.
     'command-line-argument': None,
     # country for routing internet through
     'localized-internet-country': None,
     # tags
-    'tags': None,
+    'tags': "BULK UPLOAD",
     # enable internet access during analysis
-    'internet-access': UnsetBool,
+    'internet-access': False,
     # enable internet simulation during analysis
-    'internet-simulation': UnsetBool,
+    'internet-simulation': True,
     # lookup samples in the report cache
     'report-cache': UnsetBool,
     # hybrid code analysis
-    'hybrid-code-analysis': UnsetBool,
+    'hybrid-code-analysis': True,
     # hybrid decompilation
-    'hybrid-decompilation': UnsetBool,
+    'hybrid-decompilation': None,
     # inspect ssl traffic
-    'ssl-inspection': UnsetBool,
+    'ssl-inspection': False,
     # instrumentation of vba scripts
-    'vba-instrumentation': UnsetBool,
+    'vba-instrumentation': None,
     # instrumentation of javascript
-    'js-instrumentation': UnsetBool,
+    'js-instrumentation': None,
     # traces Java JAR files
-    'java-jar-tracing': UnsetBool,
+    'java-jar-tracing': None,
     # traces .Net files
-    'dotnet-tracing': UnsetBool,
+    'dotnet-tracing': None,
     # send an e-mail upon completion of the analysis
-    'email-notification': UnsetBool,
+    'email-notification': None,
     # starts the Sample with normal user privileges
-    'start-as-normal-user': UnsetBool,
+    'start-as-normal-user': None,
     # Set the system date for the analysis. Format is YYYY-MM-DD
     'system-date': None,
     # changes the locale, location, and keyboard layout of the analysis machine
@@ -106,11 +106,11 @@ submission_defaults = {
     'fast-mode': UnsetBool,
     # Enables secondary Results such as Yara rule generation, classification via Joe Sandbox Class as well as several detail reports.
     # Analysis will run faster if secondary results are not enabled.
-    'secondary-results': UnsetBool,
+    'secondary-results': True,
     # Perform APK DEX code instrumentation. Only applies to Android analyzer. Default true.
     'apk-instrumentation': UnsetBool,
     # Perform AMSI unpacking. Only applies to Windows. Default true
-    'amsi-unpacking': UnsetBool,
+    'amsi-unpacking': True,
     # Use live interaction. Requires user interaction via the web UI. Default false
     'live-interaction': UnsetBool,
     # encryption password for analyses
@@ -123,7 +123,7 @@ submission_defaults = {
     # export the report to Joe Sandbox View
     'export-to-jbxview': UnsetBool,
     # lookup the reputation of URLs and domains (Requires sending URLs third-party services.)
-    'url-reputation': UnsetBool,
+    'url-reputation': True,
     # Delete the analysis after X days
     'delete-after-days': None,
 
