@@ -69,7 +69,7 @@ submission_defaults = {
     # country for routing internet through
     'localized-internet-country': None,
     # tags
-    'tags': "BULK UPLOAD",
+    'tags': None,
     # enable internet access during analysis
     'internet-access': False,
     # enable internet simulation during analysis
